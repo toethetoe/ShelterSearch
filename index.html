@@ -1,7 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-	<style>
+	<style> /*css to style the website and make it responsive*/
 	body {
 		background-color: #ced9ea;
 	}
@@ -29,7 +29,7 @@
 	}
 	ul {
 		padding: 0px;
-			} /* comment */
+			} 
 	li {
 		display: inline;
 		padding: 0px 10px 0px 10px;
@@ -39,6 +39,7 @@
 		padding-top: 20px;
 		display: block;
 	}
+	/*make the website responsive*/
 	@media (max-width: 500px) {
 		.title {
 			font-size: 36px;
@@ -78,6 +79,15 @@
     <div id="map">
     	<img src="http://media.point2.com/p2a/htmltext/378c/7195/8300/36d4017c4c077e5a7f27/original.jpg">
     </div>
-
-
+    <script> //javascript to make the website interactive
+    	function findzip(zipcode) {
+    		console.log("Your zip code is  " + zipcode);
+    	}
+    	findzip("19104")
+    	function alertIt(input) {
+    		alert(input)
+    	}
+    	alertIt("Ziiiiiiiip codes!")
+    </script>
+</body>
 </html>
