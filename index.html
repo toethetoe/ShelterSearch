@@ -2,6 +2,9 @@
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
 	<style>
+	body {
+		background-color: #ced9ea;
+	}
 	header {
 		text-align: center;
 		color: black;
@@ -13,7 +16,9 @@
 	h1 {
 		font-size: 60px;;
 	}
-
+	.title {
+		margin: 0;
+	}
 
 	a {
 		color: white;
@@ -31,15 +36,26 @@
 	}
 	div {
 		text-align: center;
-		padding-bottom: 40px;
 		padding-top: 20px;
 		display: block;
+	}
+	@media (max-width: 500px) {
+		.title {
+			font-size: 36px;
+		}
+		li {
+			display: block;
+			padding: 7px 0 7px 0;
+		}
+		a {
+			padding: 5px 40%;
+		}
 	}
 	</style>
 </head>
 <body>
     <header>
-        	<h1>Shelter Search</h1>
+        <h1 class="title">Shelter Search</h1>
         <ul>
             <li>
                 <a href="#">Home</a>
@@ -54,7 +70,7 @@
     </header>
     <div id="zip code input">
     	<form action="action_page.php">
-    	<p>ZIP code:</p>
+    	<h2>ZIP code:</h2>
     	<input type="text" name="zip code">
     	<input type="submit" value="Submit">
     	</form>
