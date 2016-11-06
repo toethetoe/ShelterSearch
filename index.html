@@ -37,6 +37,7 @@
 	div {
 		text-align: center;
 		padding-top: 20px;
+		padding-bottom: 20px;
 		display: block;
 	}
 	/*make the website responsive*/
@@ -52,6 +53,11 @@
 			padding: 5px 40%;
 		}
 	}
+	input {
+		padding: 10px;
+		wideth: 200px;
+
+	}
 	</style>
 </head>
 <body>
@@ -65,29 +71,34 @@
             	<a href="#">About</a>
             </li>
             <li>
-           		<a href="#">Other</a>
+           		<a href="#">Complete directory</a>
             </li>
         </ul>
     </header>
-    <div id="zip code input">
-    	<form action="action_page.php">
+    <div id="ask-for-zip">
     	<h2>ZIP code:</h2>
-    	<input type="text" name="zip code">
-    	<input type="submit" value="Submit">
-    	</form>
+    	<input type="text" name="zip-code" placeholder="ZIP code">
+    	<!--<input type="submit" value="Submit">-->
+    	<button>Submit</button>
     </div>
     <div id="map">
     	<img src="http://media.point2.com/p2a/htmltext/378c/7195/8300/36d4017c4c077e5a7f27/original.jpg">
     </div>
-    <script> //javascript to make the website interactive
-    	function findzip(zipcode) {
-    		console.log("Your zip code is  " + zipcode);
-    	}
-    	findzip("19104")
-    	function alertIt(input) {
-    		alert(input)
-    	}
-    	alertIt("Ziiiiiiiip codes!")
+    <!--javascript to access jquery library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script>
+    	$("button").on("click", function() {
+    		var zipCode = $("input").val();
+    			alert(zipCode);
+    		})
+    	//when you click the submit button, do a thing (alert, append, etc)
     </script>
 </body>
 </html>
+
+
+
+<!--in the future: instead of a PDF for "compelte directory", use the actual database so that it reflects most updated information on each shelter-->
+<!--instead of typing in your zip code, you should be able to hover over your section of Philly, see the google map dots of all the closest shelters, and then click for a list-->
+<!--shelter employees should be able to update their information and/or indicate whether the shelter is full or still has available beds-->
+<!--add option to send walking directions to a specific shelter to your smartphone?-->
