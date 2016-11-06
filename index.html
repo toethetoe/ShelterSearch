@@ -3,15 +3,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
 	<style> /*css to style the website and make it responsive*/
 	body {
-		background-color: #ced9ea;
+		background-color: #AED6F1;
 	}
 	header {
 		text-align: center;
 		color: black;
 		padding-bottom: 40px;
 		display: block;
-		background: url("http://valientmarketresearch.com/wp-content/uploads/2014/09/Philadelphia-Market-Research-Night-Skyline.jpg");
+		background: url("http://lovesphotoalbum.com/wp-content/uploads/2012/10/Phill-Skyline-View-From-South-Street-Bridge1.jpg");
 		background-size: cover;
+		background-position: center;
+		height: 50%;
 	}
 	h1 {
 		font-size: 60px;;
@@ -23,7 +25,7 @@
 	a {
 		color: white;
 		text-decoration: none;
-		background-color: gray;
+		background-color: #154360;
 		padding: 5px;
 		border-radius: 5px;
 	}
@@ -41,9 +43,9 @@
 		display: block;
 	}
 	.checkboxes {
-		display: inline;
-		padding-top: 0px;
-		padding-bottom: 0px;
+		display: inline-block;
+		width: 15%;
+		padding: 0 auto;
 	}
 	/*make the website responsive*/
 	@media (max-width: 500px) {
@@ -61,9 +63,6 @@
 			display: block;
 		}
 	}
-	input {
-		padding: 10px;
-		wideth: 200px;
 
 	}
 	</style>
@@ -71,6 +70,7 @@
 <body>
     <header>
         <h1 class="title">Shelter Search</h1>
+        <h3 class="title">Emergency Housing in Philadelphia, PA</h3>
         <ul>
             <li>
                 <a href="#">Home</a>
@@ -114,7 +114,7 @@
     	$("button").on("click", function() {
     		if($("#publiccheck").is(':checked'))
     			$("#emptySpace").empty();
-				$("#emptySpace").append("<p><b>Intake Center</b> </p><p><i>Apple Tree Family Center</i><br><b>Address:</b>1430 Cherry Street, Philadelphia, PA 19102 <br><b>Phone:</b> (215)686-7150 or 7152 <br><b>Hours:</b> 7:30AM - 3:00PM, Monday-Friday <br><b>Criteria:</b> Families, including male heads of household & single women<br><b>Requirements:</b> Photo I.D., SCC, Birth Certificates for all dependents </p>");
+				$("#emptySpace").append("<p><b>Intake Center</b> </p><p><i>Apple Tree Family Center</i><br><b>Address: </b>1430 Cherry Street, Philadelphia, PA 19102 <br><b>Phone:</b> (215)686-7150 or 7152 <br><b>Hours:</b> 7:30AM - 3:00PM, Monday-Friday <br><b>Criteria:</b> Families, including male heads of household & single women<br><b>Requirements:</b> Photo I.D., SCC, Birth Certificates for all dependents </p>");
     			$('html, body').animate({
         			scrollTop: $("#emptySpace").offset().top
     			}, 2000);
