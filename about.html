@@ -1,0 +1,101 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+	<style> /*css to style the website and make it responsive*/
+	body {
+		background-color: #AED6F1;
+	}
+	header {
+		text-align: center;
+		color: black;
+		padding-bottom: 40px;
+		display: block;
+		background: url("http://lovesphotoalbum.com/wp-content/uploads/2012/10/Phill-Skyline-View-From-South-Street-Bridge1.jpg");
+		background-size: cover;
+		background-position: center;
+		height: 50%;
+	}
+	h1 {
+		font-size: 60px;;
+		text-align: center;
+	}
+	.title {
+		margin: 0;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+		background-color: #154360;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	ul {
+		padding: 0px;
+			} 
+	li {
+		display: inline;
+		padding: 0px 10px 0px 10px;
+	}
+	.goals {
+		list-style-type: circle;
+		display: block;
+	}
+	div {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: block;
+	}
+	article {
+		max-width: 750px;
+        padding: 20px;
+        margin: 0 auto;
+	}
+	/*make the website responsive*/
+	@media (max-width: 500px) {
+		.title {
+			font-size: 36px;
+		}
+		li {
+			display: block;
+			padding: 7px 0 7px 0;
+		}
+		a {
+			padding: 5px 40%;
+		}
+		.checkboxes {
+			display: block;
+		}
+	}
+
+	}
+	</style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Shelter Search</h1>
+        <h3>Emergency Housing in Philadelphia, PA</h3>
+        <ul type="disks">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+            	<a href="#">About</a>
+            </li>
+            <li>
+           		<a href="pdf list of shelters.pdf">Directory</a>
+            </li>
+        </ul>
+    </header>
+    <h1>About Us</h1>
+    <article>
+   		 <p>Shelter Search is a navigational tool for those in need of finding temporary housing in Philadelphia, PA. It is user friendly and easily accessible for anyone with an internet connection. The site aims to provide a simple list based on specific search criteria, primarily location via zip code. Users can also indicate whether they are looking for private or public shelters, are a man or a woman, and if they have a child/children with them. The hope is that users will be able to find the resources that they need more efficiently. This tool also makes compiling the relevant information easier, so that it can be distributed to those without access to the internet.</p><p>In the future, this tool could be expanded to include a wider range of locations and features!</p><br><p>These could include:</p>
+   		 <ul>
+   		 	<li class="goals">1. Providing walking directions and maps to the resources</li>
+   		 	<li class="goals">2. Making the database editable by shelter employees so they can regularly update their capacity</li>
+   		 	<li class="goals">3. Expanding to other resources such as food, public bathrooms, etc.</li>
+   		 </ul>
+	</article>
+ </body>
+</html>
