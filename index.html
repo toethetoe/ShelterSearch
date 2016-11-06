@@ -71,7 +71,7 @@
             	<a href="#">About</a>
             </li>
             <li>
-           		<a href="#">Complete directory</a>
+           		<a href="#">Directory</a>
             </li>
         </ul>
     </header>
@@ -84,13 +84,14 @@
     <div id="map">
     	<img src="http://media.point2.com/p2a/htmltext/378c/7195/8300/36d4017c4c077e5a7f27/original.jpg">
     </div>
+    <div id="emptySpace"></div>
     <!--javascript to access jquery library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script>
     	$("button").on("click", function() {
-    		var zipCode = $("input").val();
-    			alert(zipCode);
-    		})
+			$("#emptySpace").append("<p>Shelter information here</p>");
+    		});
+    	
     	//when you click the submit button, do a thing (alert, append, etc)
     </script>
 </body>
@@ -102,3 +103,4 @@
 <!--instead of typing in your zip code, you should be able to hover over your section of Philly, see the google map dots of all the closest shelters, and then click for a list-->
 <!--shelter employees should be able to update their information and/or indicate whether the shelter is full or still has available beds-->
 <!--add option to send walking directions to a specific shelter to your smartphone?-->
+<!--check length and composition of 'zip code' input to make sure it's a valid zip code-->
