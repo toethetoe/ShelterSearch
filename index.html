@@ -90,8 +90,10 @@
     <script>
     	$("button").on("click", function() {
 			$("#emptySpace").append("<p>Shelter information here</p>");
-    		});
-    	
+    		$('html, body').animate({
+        		scrollTop: $("#emptySpace").offset().top
+    		}, 2000);
+    	});
     	//when you click the submit button, do a thing (alert, append, etc)
     </script>
 </body>
