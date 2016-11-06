@@ -40,6 +40,11 @@
 		padding-bottom: 20px;
 		display: block;
 	}
+	.checkboxes {
+		display: inline;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
 	/*make the website responsive*/
 	@media (max-width: 500px) {
 		.title {
@@ -51,6 +56,9 @@
 		}
 		a {
 			padding: 5px 40%;
+		}
+		.checkboxes {
+			display: block;
 		}
 	}
 	input {
@@ -81,6 +89,21 @@
     	<!--<input type="submit" value="Submit">-->
     	<button>Submit</button>
     </div>
+    <div class="checkboxes" id="pubcheck">
+    	<input type="checkbox" id="publiccheck"><label for="publiccheck">Public</label>
+    </div>
+    <div class="checkboxes" id="privcheck">
+    	<input type="checkbox" id="privatecheck" value="Private"><label for="privatecheck">Private</label>
+    </div>
+    <div class="checkboxes" id="mcheck">
+    	<input type="checkbox" id="mancheck"><label for="mancheck">Men</label>
+    </div>
+    <div class="checkboxes" id="womcheck">
+    	<input type="checkbox" id="womancheck"><label for="womancheck">Women</label>
+    </div>
+    <div class="checkboxes" id="kidscheck">
+    	<input type="checkbox" id="childrencheck"><label for="childrencheck">Children</label>
+    </div>
     <div id="map">
     	<img src="http://media.point2.com/p2a/htmltext/378c/7195/8300/36d4017c4c077e5a7f27/original.jpg">
     </div>
@@ -89,11 +112,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script>
     	$("button").on("click", function() {
-    		$("#emptySpace").empty();
-			$("#emptySpace").append("<p>Shelter information here The standard Lorem Ipsum passage, used since the 1500s  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>");
-    		$('html, body').animate({
-        		scrollTop: $("#emptySpace").offset().top
-    		}, 2000);
+    		if($("#publiccheck").is(':checked'))
+    			$("#emptySpace").empty();
+				$("#emptySpace").append("<p><b>Intake Center</b> </p><p><i>Apple Tree Family Center</i><br><b>Address:</b>1430 Cherry Street, Philadelphia, PA 19102 <br><b>Phone:</b> (215)686-7150 or 7152 <br><b>Hours:</b> 7:30AM - 3:00PM, Monday-Friday <br><b>Criteria:</b> Families, including male heads of household & single women<br><b>Requirements:</b> Photo I.D., SCC, Birth Certificates for all dependents </p>");
+    			$('html, body').animate({
+        			scrollTop: $("#emptySpace").offset().top
+    			}, 2000);
+    		if($("#privatecheck").is(':checked'))
+    			$("#emptySpace").empty();
+    			if($("#womancheck").is(':checked'))
+					$("#emptySpace").append("<p><i>People's Emergency Center (Gloria's Place):</i><br><b>Address:</b> 3902 Spring Garden Street, Philadelphia, PA 19104 <br><b>Phone:</b> (215)382-7522<br><b>Hours:</b> 9:00AM-4:00PM & 7:00-10:00PM <br><b>Criteria:</b> Women and Children<br><b>Requirements:</b> I.D.</p>");
+				if($("#mancheck").is(':checked'))
+					$("#emptySpace").append("<p><i>Sunday Breakfast Rescue Mission)</i><br><b>Address:</b> 302 North 13th Street, Philadelphia, PA 19107<br><b>Phone:</b> (215) 922-6400 <i> *Do not need to call ahead</i><br><b>Hours:</b> Arrive before 7:00PM <br><b>Criteria:</b> Men<br><b>Requirements:</b> Need I.D. to receive a bed <br><b> Extra Information</b> Allowed <b>one</b> bag per person.<br>Receive a meal and shower before bed. Able to stay up to <b>30 days!</b></p>");
     	});
     	//when you click the submit button, do a thing (alert, append, etc)
     </script>
